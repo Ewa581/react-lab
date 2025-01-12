@@ -17,12 +17,19 @@ function App() {
     setTitle(event.target.value);
   }  
 
+  function handleShowMovieClick() {
+   alert(title);
+  }
+
   return (
       <div>
           <h1>My favourite movies to watch</h1>
           <h2>My favourite movie for today is {title}</h2>
           {title.length > 0 && <div> {message}</div>}
           <input type="text" onChange={handleChange}/>
+          <button onClick={() => alert(title)}>
+             Show movie Title 
+             </button>
       </div>
   );
 }
