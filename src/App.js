@@ -1,9 +1,12 @@
+import './App.css';
+import {useState} from "react";
+
 function App() {
 
-  let title = 'Wall-E';
+  const [title, setTitle] = useState('Wall-E')
 
   function handleChange(event) {
-    console.log(event.target.value);
+    setTitle(event.target.value);
   }  
 
   return (
